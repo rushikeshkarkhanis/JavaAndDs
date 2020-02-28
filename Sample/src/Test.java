@@ -5,7 +5,7 @@ public class Test {
 		int num = 0b001111;
 		System.out.println(num);
 
-		int number = 1000000000;
+		int number = 1000000;
 		Integer Num = 100000000;
 		Long lnum = 100000000000l;
 
