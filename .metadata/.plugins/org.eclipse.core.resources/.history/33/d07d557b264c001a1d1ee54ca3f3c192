@@ -1,0 +1,21 @@
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+public class ArraySortStringProgram {
+
+	public static void main(String[] args) {
+
+		List<String> list = Arrays.asList("Rushi", "Somya", "Mayur", "Nandini", "Prasad", "Mandar", "Somya", "Diptesh",
+				"Nandini", "Rushi", "Isan", "Akash", "Saurabh", "Shivi", "Mummy", "Pappa");
+
+		System.out.println(list);
+
+		Set<String> uniqueList = new HashSet<String>(list);
+
+		// Collections.sort(list,);
+
+	}
+
+}

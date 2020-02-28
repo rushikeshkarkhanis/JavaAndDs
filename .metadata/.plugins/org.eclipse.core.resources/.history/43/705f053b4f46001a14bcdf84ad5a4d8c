@@ -1,0 +1,18 @@
+package com.rk.model;
+
+import com.rk.model.enu.Designation;
+import com.rk.model.enu.Gender;
+import com.rk.model.enu.Status;
+
+public class Employee {
+
+	private String firstName;
+	private String lastName;
+	private int age;
+	private int salary;
+	private Gender gender;
+	private Status status;
+	private Designation designation;
+	private String Description;
+
+}

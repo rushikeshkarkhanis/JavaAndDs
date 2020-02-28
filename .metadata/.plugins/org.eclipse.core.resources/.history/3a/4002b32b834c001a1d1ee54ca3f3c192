@@ -1,0 +1,23 @@
+public class SumNoLoop {
+
+	public static void main(String[] args) {
+
+		int[] array = new int[] { 1, 2, 3, 4, 5 };
+		System.out.println(sum(array, 0));
+	}
+
+	public static int sum(int[] arr, int index) {
+
+		System.out.println(arr.length + "lenght");
+
+		System.out.println(index + "Index");
+		if (arr.length <= index) {
+
+			return 0;
+		}
+
+		System.out.println(arr[index] + sum(arr, index + 1));
+		return arr[index] + sum(arr, index + 1);
+
+	}
+}

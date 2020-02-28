@@ -1,0 +1,102 @@
+package com.rk.model;
+
+import com.rk.model.enu.Designation;
+import com.rk.model.enu.Gender;
+import com.rk.model.enu.Status;
+
+public class Employee {
+
+	private String firstName;
+	private String lastName;
+	private int age;
+	private int salary;
+	private Gender gender;
+	private Status status;
+	private Designation designation;
+	private String Description;
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	public int getSalary() {
+		return salary;
+	}
+
+	public void setSalary(int salary) {
+		this.salary = salary;
+	}
+
+	public Gender getGender() {
+		return gender;
+	}
+
+	public void setGender(Gender gender) {
+		this.gender = gender;
+	}
+
+	public Status getStatus() {
+		return status;
+	}
+
+	public void setStatus(Status status) {
+		this.status = status;
+	}
+
+	public Designation getDesignation() {
+		return designation;
+	}
+
+	public void setDesignation(Designation designation) {
+		this.designation = designation;
+	}
+
+	public String getDescription() {
+		return Description;
+	}
+
+	public void setDescription(String description) {
+		Description = description;
+	}
+
+	@Override
+	public String toString() {
+		return "Employee [firstName=" + firstName + ", lastName=" + lastName + ", age=" + age + ", salary=" + salary
+				+ ", gender=" + gender + ", status=" + status + ", designation=" + designation + ", Description="
+				+ Description + "]";
+	}
+
+	public Employee(String firstName, String lastName, int age, int salary, Gender gender, Status status,
+			Designation designation, String description) {
+		super();
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.age = age;
+		this.salary = salary;
+		this.gender = gender;
+		this.status = status;
+		this.designation = designation;
+		Description = description;
+	}
+
+}

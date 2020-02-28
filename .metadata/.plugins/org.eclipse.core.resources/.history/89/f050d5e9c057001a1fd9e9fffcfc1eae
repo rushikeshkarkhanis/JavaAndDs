@@ -1,0 +1,37 @@
+package com.rk.client;
+
+import com.rk.customer.AccountHolder;
+import com.rk.model.Account;
+
+public class Client {
+
+	public static int MIN_PRIORITY = 1;
+	public static int MAX_PRIORITY = 10;
+
+	public static void main(String[] args) {
+
+		int num= 0b0000000001111;
+		
+		System.out.println(num);
+		Account account = new Account();
+
+		AccountHolder accountHolder = new AccountHolder(account);
+
+		Thread rushi = new Thread(accountHolder);
+
+		Thread mummy = new Thread(accountHolder);
+
+		rushi.setName("Rushi");
+
+		mummy.setName("Mummy");
+
+		mummy.setPriority(MIN_PRIORITY);
+		rushi.setPriority(MAX_PRIORITY);
+
+		mummy.start();
+
+		rushi.start();
+
+	}
+
+}

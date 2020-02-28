@@ -1,0 +1,35 @@
+package com.rk.test;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+
+import com.rk.model.Employee;
+import com.rk.model.enu.Designation;
+import com.rk.model.enu.Gender;
+import com.rk.model.enu.Status;
+
+public class EmployeeTest {
+
+	public static void main(String[] args) {
+
+		List<Employee> empList = Arrays.asList(
+				new Employee("Rushikesh", "Karkhanis", 23, 587000, Gender.MALE, Status.SINGLE,
+						Designation.AssociateConsultant, "FullStack Developer"),
+				new Employee("Diptesh", "Chipkar", 24, 720000, Gender.MALE, Status.SINGLE, Designation.StaffConsultant,
+						"Java Mircoservice Developer"),
+				new Employee("Akash", "Jadhav", 25, 800000, Gender.MALE, Status.SINGLE, Designation.StaffConsultant,
+						"Spring WebServices"),
+				new Employee("Diptesh", "Chipkar", 24, 720000, Gender.MALE, Status.SINGLE, Designation.StaffConsultant,
+						"Java Mircoservice Developer"),
+				new Employee("Akash", "Jadhav", 25, 800000, Gender.MALE, Status.SINGLE, Designation.StaffConsultant,
+						"Spring WebServices"),
+				new Employee("Mayur", "Chitnis", 32, 900000, Gender.MALE, Status.SINGLE, Designation.AssistantManager,
+						"Finance Lead"));
+
+		int empfilter = (int)empList.stream().filter(emp -> emp.getAge() < 25).map(emp -> emp.getFirstName()).distinct().count();
+
+		System.out.println(empfilter);
+	}
+
+}

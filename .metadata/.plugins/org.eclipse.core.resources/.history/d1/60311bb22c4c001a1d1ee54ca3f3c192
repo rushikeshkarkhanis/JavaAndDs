@@ -1,0 +1,9 @@
+
+public class IntegersArray {
+
+	public static void main(String[] args) {
+
+		int[] intArray = new int[] { 4, 1, 3, -23 };
+	}
+
+}

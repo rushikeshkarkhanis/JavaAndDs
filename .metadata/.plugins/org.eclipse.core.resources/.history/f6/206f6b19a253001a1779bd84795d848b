@@ -1,0 +1,15 @@
+public class Test {
+	public static void main(String[] args) {
+		int num = 0b001111;
+		System.out.println(num);
+
+		int number = 1000000000;
+		Integer Num = 1000000000000000;
+		Long lnum = 1000000000000000L;
+
+		System.out.println(number);
+		System.out.println(Num);
+		System.out.println(lnum);
+	}
+
+}

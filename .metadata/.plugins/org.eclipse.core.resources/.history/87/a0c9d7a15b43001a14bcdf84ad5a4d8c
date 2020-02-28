@@ -1,0 +1,12 @@
+package com.rk.customer;
+
+import com.rk.model.Account;
+
+public class AccountHolder {
+
+	private Account account;
+
+	public AccountHolder(Account account) {
+		this.account = account;
+	}
+}

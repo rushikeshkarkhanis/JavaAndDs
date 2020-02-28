@@ -1,0 +1,18 @@
+package com.rk.customer;
+
+import com.rk.model.Account;
+
+public class AccountHolder {
+
+	private Account account;
+
+	public AccountHolder(Account account) {
+		this.account = account;
+	}
+
+	public void doWithdraw() {
+		for (int i = 1; i <= 4; i++) {
+
+		}
+	}
+}

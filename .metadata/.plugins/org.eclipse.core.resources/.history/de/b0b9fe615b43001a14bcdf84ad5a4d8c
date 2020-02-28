@@ -1,0 +1,5 @@
+package com.rk.customer;
+
+public class AccountHolder {
+
+}

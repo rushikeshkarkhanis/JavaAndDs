@@ -1,0 +1,34 @@
+package com.rk.client;
+
+import com.rk.customer.AccountHolder;
+import com.rk.model.Account;
+
+public class Client {
+
+	public static void main(String[] args) {
+
+		Account account = new Account();
+
+		AccountHolder accountHolder = new AccountHolder(account);
+
+		Thread rushi = new Thread(accountHolder);
+
+		Thread mummy = new Thread(accountHolder);
+
+		rushi.setName("Rushi");
+
+		mummy.setName("Mummy");
+
+		rushi.start();
+
+		try {
+			rushi.join(500);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		mummy.start();
+	}
+
+}

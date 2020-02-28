@@ -1,0 +1,40 @@
+package com.rk.client;
+
+import java.util.Scanner;
+
+import com.rk.customer.AccountHolder;
+import com.rk.model.Account;
+
+public class Client {
+
+	public static int MIN_PRIORITY = 1;
+	public static int MAX_PRIORITY = 10;
+
+	public static int amount;
+
+	public static String name;
+
+	public static void main(String[] args) {
+
+		@SuppressWarnings("resource")
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println("Please enter your name");
+		name = sc.nextLine();
+
+		System.out.println("Please enter the amount");
+		amount = sc.nextInt();
+
+		Account account = new Account();
+
+		AccountHolder accountHolder = new AccountHolder(account);
+
+		Thread windrawrer = new Thread(accountHolder);
+
+		windrawrer.setName(name);
+
+		windrawrer.start();
+
+	}
+
+}
